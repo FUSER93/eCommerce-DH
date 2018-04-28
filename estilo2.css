@@ -1,5 +1,7 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
-body {font-family: sans-serif; font-size: 14px;background-color: #4F89C4;}
+body {font-family: 'Roboto', sans-serif; font-size: 14px;background-color: #4F89C4;}
+
+/*HEADER */
 
 header {
   position: absolute;
@@ -15,14 +17,17 @@ header h2 a {
   font-size: 0.9em;
   text-decoration: none;
   color: black;
+  background-color: rgba(255,255,255,0.35);
+  padding: 0.3%;
 }
 
 header nav li{
   float: right;
   font-size: 0.8em;
   list-style: none;
-  padding-top: 0.2%;
+  padding: 0.3%;
   font-weight: bold;
+  background-color:rgba(255,255,255,0.35);
 }
 header nav li a{
   text-decoration: none;
@@ -51,12 +56,14 @@ header nav li a{
   justify-content: center;
   font-size: 2em;
   flex-basis: 12%;
+  text-shadow: 1.5px 1.5px black;
 }
 .hero h3{
   display: flex;
   justify-content: center;
   font-size: 1em;
   flex-basis: 15%;
+  text-shadow: 1.5px 1.5px black;
 }
 
 .hero form {
@@ -94,10 +101,14 @@ header nav li a{
   background-color: white;
 }
 
+/* FIN HEADER */
+
+/* RUBROS */
+
 .opciones {
   width: 100%;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +143,7 @@ i:hover {
 .opciones .rubros {
   display: flex;
   flex-direction: row;
-justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
@@ -144,106 +155,86 @@ justify-content: space-between;
   text-align: center;
   font-weight: bold;
 }
+  /* FIN RUBROS */
 
 
-.opciones-sec{
-  margin-left: 10%;
+/* CONTENEDORES */
+
+hr {
+  width: 100%;
+}
+
+.opc-sec {
   width: 80%;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 4px;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.opciones-sec .contenedor-sec ul {
-  display: flex;
-  flex-direction: row;
-  padding-right: 5%;
-}
-
-.opciones-sec .contenedor-sec ul li {
-  list-style: none;
-  width: 20vw;
-  height: 30vh;
-  overflow: hidden;
-  margin-left: 5%;
-
-}
-
-.opciones-sec .contenedor-sec ul li:hover {
-  border: 2px solid #4F89C4;
-}
-
-.opciones-sec h4 {
-  margin-top: 2%;
-  text-align: center;
-}
-
-.detalle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  margin-right: 5%;
-  margin-left: 3%;
-  margin-top: -3%;
-  margin-bottom: 2%;
-}
-.detalle li {
-  list-style: none;
-  width: 20%;
-  font-size: 0.7em;
-  text-align: center;
-  font-weight: bold;
 }
 
-footer {
-  height: 13vh;
-  width: 100%;
+.cont-sec {
+  width: 50vw;
+  height: 15vh;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+
+.detalle h4 {
   background-color: black;
+  color: white;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  padding: 2px;
+  width: 50vw;
+}
+
+/* FIN CONTENEDORES */
+
+.main-footer {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
 }
-
-footer i {
-  color: white;
-  flex-direction: row;
-}
-footer p {
+footer a {
+  text-decoration: none;
   color: white;
 }
-footer .redes {
-  margin-top: 1%;
+footer ul {
+  width: 100%;
+  background-color: black;
+}
+footer li{
+  background-color: black;
   text-align: center;
-}
-footer nav {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: white;
-  margin-bottom: 2%;
-  margin-top: -1%;
-}
-
-footer nav li {
-  float: right;
-  font-size: 1em;
   list-style: none;
+  padding: 2%;
+  font-size: 1.2em;
 }
 
-footer nav li a{
-  text-decoration: underline;
-  padding: 1vw;
+#redes i {
   color: white;
+}
+
+#redes i:hover {
+  color: #4F89C4;
 }
 #legal {
   color: white;
   font-size: 0.8em;
 }
+
+        /*CORRECION PARA 425 */
+
+@media (min-width: 425px) {
+.cont-sec img {
+  width: 350px;
+}
+}
+
+          /* TABLET */
 
 @media (min-width: 768px) {
   header h2 a {
@@ -251,11 +242,95 @@ footer nav li a{
   }
 
   header nav li{
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
+
   .hero h1{
-    font-size: 2.3em;
+    font-size: 2em;
+  }
+  .hero h3{
+    font-size: 1.1em;
+  }
+
+  .hero form input{
+    font-size: 1em;
+  }
+  .hero form .btn {
+    font-size: 1.2em;
+  }
+
+  /* FIN HEADER */
+
+  /* RUBROS */
+
+  .opciones li i {
+    text-decoration: none;
+  }
+
+  .opciones h3 {
+    font-size: 1.3em;
+  }
+
+  .opciones .iconos li {
+    width: 20%;
+    font-size: 0.9em;
+  }
+  .opciones .rubros li {
+    font-size: 0.8em;
+
+  }
+    /* FIN RUBROS */
+
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.opc-sec h3 {
+  font-size: 1.5em;
+}
+.cont-sec {
+  width: 35vw;
+  height: 15vh;
+}
+
+.cont-sec img {
+  width: 300px;
+}
+
+.detalle h4 {
+  width: 35vw;
+  font-size: 1em;
+}
+  /* FIN CONTENEDORES */
+
+  footer li{
+    padding: 1%;
+    font-size: 1.1em;
+  }
+
+  #legal {
+    font-size: 1em;
+  }
+}
+        /* laptop */
+
+@media (min-width: 1024px) {
+  header h2 a {
+    font-size: 1.5em;
+  }
+
+  header nav li{
+    font-size: 1.2em;
+  }
+
+
+  .hero h1{
+    font-size: 2.4em;
   }
   .hero h3{
     font-size: 1.5em;
@@ -264,57 +339,62 @@ footer nav li a{
   .hero form input{
     font-size: 1.2em;
   }
-
   .hero form .btn {
     font-size: 1.4em;
   }
 
-  .opciones h3 {
-    font-size: 1.7em;
+  /* FIN HEADER */
+
+  /* RUBROS */
+
+  .opciones li i {
+    text-decoration: none;
+
   }
 
+  .opciones h3 {
+    font-size: 1.6em;
+  }
 
+  .opciones .iconos li {
+    width: 20%;
+    font-size: 1.2em;
+  }
   .opciones .rubros li {
     font-size: 1em;
-  }
 
-
-  .opciones-sec .contenedor-sec ul li {
-    height: 15vh;
   }
+    /* FIN RUBROS */
 
-  .opciones-sec h4 {
-    font-size: 1.5em;
-  }
-
-  .detalle li {
-    margin-top: 1%;
-    font-size: 1em;
-  }
-
-  footer nav li {
-    font-size: 1em;
-  }
-
-  #legal {
-    font-size: 1em;
-  }
+/* CONTENEDORES */
+.flex {
+justify-content: space-between;
 }
 
-@media (min-width:968px) {
-  .opciones-sec .contenedor-sec ul li {
-    height: 20vh;
-  }
+.cont-sec {
+width: 20vw;
+height: 20vh;
+margin-right: 20px;
+}
 
-  .opciones-sec h4 {
-    font-size: 1.5em;
-  }
+.cont-sec img {
+width: 500px;
+}
 
-  .detalle li {
-    margin-top: 2%;
-    font-size: 1em;
-  }
-  footer nav li {
-    font-size: 1em;
-  }
+.detalle h4 {
+width: 20vw;
+font-size: 1.2em;
+}
+
+/* FIN CONTENEDORES */
+
+footer li{
+  padding: 0.5%;
+  font-size: 1.3em;
+}
+
+#legal {
+  font-size: 1em;
+}
+
 }
