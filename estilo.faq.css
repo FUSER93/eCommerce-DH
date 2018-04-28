@@ -1,0 +1,23 @@
+*{ margin:0; padding: 0; box-sizing: border-box}
+
+body{font-family: 'Roboto', sans-serif; background-color: #4F89C4;}
+
+header{ background-color: #081212; padding: 13px;}
+
+header li { display: inline;}
+
+header li a{ color:white; padding:10px; }
+
+header li a:hover{ background-color: #35363B;}
+
+h2{padding: 20px; margin:10px auto; width:95%; text-align: center; background-color: #CECFF3;  border-radius: 20px;}
+
+.formulario{width: 90%; margin: 0 auto;}
+
+h3{padding: 15px; color:white; background-color: #4F89C4;}
+
+p{padding: 30px;  background-color: #F0F0F0;  border-radius: 10px;}
+
+.aclass{padding: 20px;background-color: #F0F0F0;  border-radius: 10px; display: inline-block; width: 100%;}
+
+a{text-decoration: none; color: black; padding: 10px;}
