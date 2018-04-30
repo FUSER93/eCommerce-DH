@@ -1,31 +1,92 @@
 *{ margin:0; padding: 0; box-sizing: border-box}
 
-body{ font-family: 'Roboto', sans-serif; background-color: #4F89C4; }
+body{ font-family: 'Roboto', sans-serif; background-color: #4F89C4; font-size: 14px;}
 
-.login{ background-color: white; width: 360px; height: 530px; padding: 40px; margin: 35px auto;}
+/*header*/
 
-header{ background-color: #081212; padding: 13px;}
+header { background-color: #081212; top:0; left:0; right:0; padding: 10px;}
 
-h2 {margin: 10px;}
+.main-header{float: left;}
 
-header li { display: inline; padding: 5px;} //header
+header .menu{display: inline-block;}
 
-header li a{ color:white; padding:15px; }
+/*icon*/
 
-header li a:hover{ background-color: #35363B;}
+header .menu-icon{ color: white;}
+
+header ul { display: block; }
+
+header li{display: inline; padding: 5px;}
+
+header li a { color: white;} /*header*/
+
+header li a:hover{background-color: #35363B;}
+
+/*login*/
+
+.login{ background-color: white; width: 360px; height: 530px; padding: 40px; margin: 35px auto; position: relative;}
+
+h2{font-size: 1em; padding: 12%;}
 
 fieldset{border:none; text-align: center;}
 
-.claseText{ margin: 30px auto;}
+input{padding: 8px; font-size: 0.7em;} /*padding de los placeholder*/
 
-input{padding: 8px;}
+/*separador entre placeholder*/
+.separador1{padding: 10px;}
 
-p{font-size:14px ;padding:10px; margin: 5px;}
+/*separador*/
 
-.boton{ background: #4F89C4; padding:10px; border-radius: 6px; color:white;}
+.separador{padding: 8%;}
 
-a{ text-decoration: none; color: white;}
+/*boton de iniciar sesion*/
 
-.preguntas{ margin:20px;}
+.boton{background: #4F89C4; padding: 3%; border-radius: 6px; color:white;}
 
-.preguntas a{font-size: 12px; text-decoration: none; color:black;}
+a{ text-decoration: none; color: white; font-size: 0.9em;}
+
+/*preguntas*/
+
+.preguntas{ margin: 40px;}
+
+.preguntas p {font-size: 0.8em;}
+
+.preguntas a{font-size: 0.7em; text-decoration: none; color:black;}
+
+/*footer*/
+
+.main-footer { display: flex; justify-content: flex-end; flex-direction: column; align-items: center;}
+
+footer a { text-decoration: none; color: white; }
+
+footer ul { width: 100%; background-color: black; }
+
+footer li{ background-color: black; text-align: center; list-style: none; padding: 2%; font-size: 1.2em; }
+
+#redes i {color: white;}
+
+#redes i:hover {color: #4F89C4;}
+#legal { color: white; font-size: 0.8em;}
+
+
+@media (min-width: 768px) {
+  header .menu{display: inline-block;}
+  h2 { font-size: 1.5em; }
+  input { font-size: 0.9em;}
+  a { font-size: 1em;}
+  .preguntas p {font-size: 1em;}
+  .preguntas a{font-size: 0.8em;}
+  footer li {padding: 1%; font-size: 1em;}
+
+  #legal {font-size: 1em;}
+
+
+@media (min-width: 1024px) {
+  h2 {font-size: 2em;}
+  input {font-size: 1em;}
+  a {font-size: 1.2em;}
+  .preguntas p {font-size: 1.1em;}
+  .preguntas a {font-size: 0.9em;}
+  footer li {padding: 0.5%; font-size: 1.1em;}
+
+  #legal {font-size: 1em;}
