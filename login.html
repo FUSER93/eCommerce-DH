@@ -4,53 +4,77 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/IntegradorDH/estilo_login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
   </head>
-  <header>
+  <header class="main.header">
+
+    <label for="menu-icon" class="menu-icon">
+      <i class="fas fa-bars"></i>
+      </label>
     <nav class="menu">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Iniciar sesión</a></li>
       </ul>
     </nav>
+
   </header>
   <body>
 
     <form class="login" action="index.html" method="post">
       <fieldset>
-        <div class="claseText">
 
         <h2>eCommerce</h2>
-        <p>
-        <input type="text" name="nombre" value="" placeholder="Nombre completo">
-        </p>
 
-        <p>
+
         <input type="text" name="usuario" value="" placeholder="Correo electrónico">
-        </p>
 
-        <p>
+        <br>
+        <div class="separador1"></div>
+
         <input type="password" name="contraseña" placeholder="Contraseña">
-        </p>
-                </div>
+
+
+        <div class="separador"></div>
 
         <a href="#" class="boton">Inicia sesión</a>
 
-        <nav class="preguntas">
-
+          <div class="preguntas">
           <p>
           <input type="checkbox" name="Recordarme" value=""> Recordarme </p>
 
+          <div class="separador"></div>
 
           <a href="#">¿Olvidó su contraseña?</a>
 
           <br><br>
 
           <a href="#">¿No tienes una cuenta? <b>Regístrate</b></a>
-        </nav>
+        </div>
 
 
       </fieldset>
     </form>
+
+    <footer class="main-footer">
+            <ul>
+              <li><a href="#">Preguntas frecuentes</a></li>
+              <hr>
+              <li><a href="#">Contacto</a></li>
+              <hr>
+              <li><a href="#">Políticas de Privacidad</a></li>
+              <hr>
+              <li><a href="#">Términos y condiciones</a></li>
+              <hr>
+              <li id="redes"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a> |
+              <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+              <hr>
+              <li id="legal"> Copyright (c) 2017 Copyright Holder All Rights Reserved.</li>
+            </ul>
+
+    </footer>
   </body>
 </html>
