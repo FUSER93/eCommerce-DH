@@ -24,7 +24,7 @@ header li a:hover{background-color: #35363B;}
 
 /*login*/
 
-.login{ background-color: white; width: 360px; height: 530px; padding: 40px; margin: 35px auto; position: relative;}
+.login{ background-color: white; width: 360px; height: 530px; padding: 40px; margin: 35px auto; border-radius:10px;}
 
 h2{font-size: 1em; padding: 12%;}
 
