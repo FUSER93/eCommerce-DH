@@ -1,0 +1,205 @@
+*{ margin:0; padding: 0; box-sizing: border-box}
+
+body{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background: #4F89C4;
+  max-width: 100%;
+}
+.menu a{
+  font-size:16px;
+  text-align: justify;
+
+}
+header { background-color: #081212; top:0; left:0; right:0; padding: 10px;}
+
+.main-header{float: left;}
+
+header .menu{display: inline-block;}
+
+header .menu-icon{ color: white;}
+
+header ul { display: block; }
+
+header li{display: inline; padding: 5px;}
+
+header li a { color: white;} /*header*/
+
+header li a:hover{background-color: #35363B;}
+
+.menu a{font-size: 0.9em; text-decoration: none; color: white; padding: 10px;}
+
+form{
+  padding:7px;
+  display:block;
+  margin: 0 auto;
+  text-align:left;
+  width:95%;
+}
+fieldset{
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+   margin:10px auto;
+   width:97%;
+   font-size: 1em;
+   text-align: center;
+   background-color: #CECFF3;
+   border-radius: 20px;
+
+}
+
+hr{margin: 2px;}
+
+.titulo {
+  font-size: 18px;
+}
+fieldset legend {
+  text-align: center;
+  color: black;
+
+}
+.requerido{color: red;}
+}
+
+input {
+  width: 90%;
+}
+.nombre {
+  width: 76%;
+  padding: 4px;
+}
+.dia {
+  width: 20%;
+  padding: 4px;
+}
+.mes {
+  width: 7%;
+  padding: 4px;
+}
+.año {
+  width: 9%;
+  padding: 4px;
+}
+
+.email {
+  width: 76%;
+  padding: 4px;
+}
+
+.contraseña {
+  width: 76%;
+  padding: 4px;
+}
+
+.radio {
+  padding-right: 5%;
+  padding-left: 3%;
+}
+.profesion {
+  width: 76%;
+  padding: 4px;
+}
+
+.caja2 select {
+  width: 76%;
+}
+.caja2 .dir {
+  width: 30%;
+  padding: 4px;
+}
+
+.caja2 .nro {
+  width: 25%;
+  padding: 4px;
+}
+
+.caja2 .piso {
+  width: 15%;
+  padding: 4px;
+}
+
+.caja2 .dpto {
+  width: 15%;
+  padding: 4px;
+}
+
+.caja2 .cp {
+  width: 25%;
+  padding: 4px;
+}
+
+.caja2 .vrs {
+  width: 80%;
+  padding: 10px;
+}
+
+.botones{padding: 10px; text-align: center;}
+
+.botones .boton{ font-size: 1.3em; background: white; padding: 10px 40px; border-radius: 6px; color:#4F89C4; }
+
+a {text-decoration: none;}
+.tyc{color:black;}
+.caja3 a{text-decoration: none; color:black;}
+
+.separador{padding: 6px;}
+
+  .main-footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  footer ul {
+    width: 100%;
+    background-color: black;
+  }
+  footer li{
+    background-color: black;
+    text-align: center;
+    list-style: none;
+    padding: 2%;
+    font-size: 1.2em;
+  }
+
+  #redes i {
+    color: white;
+  }
+
+  #redes i:hover {
+    color: #4F89C4;
+  }
+  #legal {
+    color: white;
+    font-size: 0.8em;
+  }
+
+
+            /* TABLET */
+
+  @media (min-width: 768px) {
+    header .menu{display: inline-block;}
+    h3{font-size: 1.2em;}
+    footer li {padding: 1%; font-size: 1em;}
+    #legal {font-size: 1em;}
+  }
+
+@media (min-width: 1024px) {
+  header .menu{display: inline-block;}
+  .menu a{font-size: 1.1em;}
+  h3 {font-size: 2em;}
+  footer li {padding: 0.5%; font-size: 1.1em;}
+  #legal {font-size: 1em;}
+  }
+}
