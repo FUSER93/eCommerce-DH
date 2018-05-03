@@ -21,7 +21,7 @@
       <strong>¡Registrate!</strong>
     </h3>
     <br>
-    <form class="todo" action="index.html" method="post">
+    <form class="todo" action="" method="post">
 
     <fieldset class="fondo">
       <h1 class="titulo">Datos personales</h1>
@@ -160,12 +160,12 @@
       <br>
       <br>
         <input class="dir" type="text" name="Direccion" required placeholder="Calle" ><label class="requerido">*</label>
-        <input class="nro" type="text" name="Direccion" required placeholder="Calle" ><label class="requerido">*</label>
+        <input class="nro" type="text" name="Direccion" required placeholder="Altura" ><label class="requerido">*</label>
         <br>
         <br>
         <input class="piso" type="text" name="Piso" placeholder="Piso">
-        <input class="dpto" type="text" name="Dpto" placeholder="Depto./Timbre">
-        <input class="cp" type="text" name="cp" placeholder="Código Postal">
+        <input class="dpto" type="text" name="Dpto" placeholder="Depto.">
+        <input class="cp" type="text" name="cp" placeholder="CP">
         <br>
         <br>
         <input class="vrs" type="text" name="Dpto" placeholder="Observaciones">
@@ -176,13 +176,13 @@
     <br>
 
 
-    <input type="checkbox" required name="terminos"><a href="#"><label class="tyc">Acepto Terminos y Condiciones</label></a>
+    <input id="check" type="checkbox" required name="terminos"><a href="#"><label class="tyc">Acepto Terminos y Condiciones</label></a>
 
     <br>
     <br>
     <div class="botones">
       <a href="#" class="boton">Enviar</a>
-      <a href="#" class="boton">Borrar</a>
+      <button class="boton" type="reset" name="" value="">Borrar</button>
 
     </div>
 </form>
