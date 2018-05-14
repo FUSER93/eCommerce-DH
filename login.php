@@ -14,6 +14,21 @@
   <body>
 
     <?php require_once('./header.php'); ?>
+    
+        <?php
+
+    $user = '';
+    $errores = [];
+
+    if ($_POST) {
+      $user = trim($_POST['user']);
+
+      if ($user == '') {
+        $errores['email'] = "Ingrese su correo electrónico";
+      }
+    }
+
+    ?>
 
     <form class="login" action="" method="post">
       <fieldset>
@@ -21,7 +36,7 @@
         <h2>eCommerce</h2>
 
 
-        <input type="text" name="usuario" value="" placeholder="Correo electrónico">
+        <input type="text" name="usuario" value="<?= $user ?>" placeholder="Correo electrónico">
 
         <br>
         <div class="separador1"></div>
