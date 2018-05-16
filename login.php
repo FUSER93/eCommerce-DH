@@ -17,27 +17,31 @@
     
         <?php
 
-    $user = '';
+    $email = '';
     $errores = [];
 
     if ($_POST) {
-      $user = trim($_POST['user']);
 
-      if ($user == '') {
-        $errores['email'] = "Ingrese su correo electrónico";
+      $email = trim($_POST['email']);
+
+      if ($email == '') {
+          $errores['email'] = 'Ingrese de nuevo su correo electrónico';
+      }
+      elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $errores['email'] = 'Ingrese su correo electrónico con un formato válido';
       }
     }
 
     ?>
 
-    <form class="login" action="" method="post">
+    <form class="login" method="post">
       <fieldset>
 
         <h2>eCommerce</h2>
 
 
-        <input type="text" name="usuario" value="<?= $user ?>" placeholder="Correo electrónico">
-
+        <input type="text" name="email" value="<?= $email ?>" placeholder="Correo electrónico">
+        
         <br>
         <div class="separador1"></div>
 
