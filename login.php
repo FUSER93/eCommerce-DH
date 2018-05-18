@@ -14,34 +14,44 @@
   <body>
 
     <?php require_once('./header.php'); ?>
-    
-        <?php
 
-    $email = '';
-    $errores = [];
 
-    if ($_POST) {
 
-      $email = trim($_POST['email']);
-
-      if ($email == '') {
-          $errores['email'] = 'Ingrese de nuevo su correo electrónico';
-      }
-      elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $errores['email'] = 'Ingrese su correo electrónico con un formato válido';
-      }
-    }
-
-    ?>
-
-    <form class="login" method="post">
+    <form class="login" method="post" enctype="multipart/form-data">
       <fieldset>
 
         <h2>eCommerce</h2>
+        <?php
 
+        $email = '';
+        $errores = [];
+
+        if ($_POST) {
+          if($_POST['email'] !== ''){
+        $email = trim($_POST['email']);
+      }
+        if (trim($_POST['email']) == '') {
+          $errores['email'] = 'Ingrese de nuevo su correo electrónico';?>
+          <div>
+            <?php echo $errores['email']; ?>
+          </div>
+
+      <?php }
+
+        elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $errores['email'] = 'Ingrese su correo electrónico con un formato válido';?>
+
+          <div>
+            <?php echo $errores['email']; ?>
+          </div>
+
+          <?php } ?>
+
+        <?php }
+   ?>
 
         <input type="text" name="email" value="<?= $email ?>" placeholder="Correo electrónico">
-        
+
         <br>
         <div class="separador1"></div>
 
@@ -50,7 +60,7 @@
 
         <div class="separador"></div>
 
-        <a href="#" class="boton">Inicia sesión</a>
+        <input type="submit" class="boton">Inicia sesión
 
           <div class="preguntas">
           <p>
