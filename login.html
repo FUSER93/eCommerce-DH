@@ -9,34 +9,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
   </head>
-  <header class="main.header">
 
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
 
-  </header>
   <body>
 
-    <form class="login" action="" method="post">
+    <?php require_once('./header.php'); ?>
+
+
+
+    <form class="login" method="post" enctype="multipart/form-data">
       <fieldset>
 
         <h2>eCommerce</h2>
+        <?php
 
+        $email = '';
+        $errores = [];
 
-        <input type="text" name="usuario" value="" placeholder="Correo electrónico">
+        if ($_POST) {
+          if($_POST['email'] !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $email = trim($_POST['email']);
+        $errores['email'] = 'Ingrese su correo electrónico con un formato válido';
+      }
+        if (trim($_POST['email']) == '') {
+          $errores['email'] = 'Ingrese de nuevo su correo electrónico';?>
+          <div>
+            <p><?php echo $errores['email'];?></p>
+          </div>
+        <?php }
+        }
+        var_dump($email);
+        var_dump($errores);
+        ?>
+
+        <input type="text" name="email" value="<?= $email ?>" placeholder="Correo electrónico">
 
         <br>
         <div class="separador1"></div>
 
-        <input type="password" name="contraseña" placeholder="Contraseña">
+        <input type="password" name="password" placeholder="password">
 
 
         <div class="separador"></div>
 
-        <a href="#" class="boton">Inicia sesión</a>
+        <input type="submit" class="boton">Inicia sesión
 
           <div class="preguntas">
           <p>
@@ -55,22 +71,6 @@
       </fieldset>
     </form>
 
-    <footer class="main-footer">
-            <ul>
-              <li><a href="faq.html">Preguntas frecuentes</a></li>
-              <hr>
-              <li><a href="#">Contacto</a></li>
-              <hr>
-              <li><a href="#">Políticas de Privacidad</a></li>
-              <hr>
-              <li><a href="#">Términos y condiciones</a></li>
-              <hr>
-              <li id="redes"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a> |
-              <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-              <hr>
-              <li id="legal"> Copyright (c) 2017 Copyright Holder All Rights Reserved.</li>
-            </ul>
-
-    </footer>
+    <?php require_once('./footer.php') ?>
   </body>
 </html>
