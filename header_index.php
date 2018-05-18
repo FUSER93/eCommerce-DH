@@ -4,6 +4,6 @@
       <nav>
         <li><a href="formulario2.php">¡Registrate!</a></li>
         <li> | </li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="login.php">Login</a></li>
       </nav>
     </header>
