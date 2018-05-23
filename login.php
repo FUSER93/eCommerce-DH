@@ -1,3 +1,11 @@
+<?php
+require_once('funciones.php');
+
+if (estaLogeado()) {
+  header('location:index.php');
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,77 +16,77 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
+
   </head>
 
+  <?php require_once('header.php'); ?>
 
   <body>
 
-    <?php require_once('./header.php'); ?>
+  <form class="login" method="post">
+    <fieldset>
+
+      <h2>eCommerce</h2>
 
 
+          <?php
 
-    <form class="login" method="post" enctype="multipart/form-data">
-      <fieldset>
+          $email = '';
+          $errores = [];
 
-        <h2>eCommerce</h2>
-        <?php
+          if ($_POST) {
 
-        $email = '';
-        $errores = [];
+              $email = trim($_POST['email']);
+              $errores = validarLoginUsuario($_POST);
 
-        if ($_POST) {
-          if($_POST['email'] !== ''){
-        $email = trim($_POST['email']);
-      }
-        if (trim($_POST['email']) == '') {
-          $errores['email'] = 'Ingrese de nuevo su correo electrónico';?>
-          <div>
-            <?php echo $errores['email']; ?>
-          </div>
+              if (empty($errores)) {
+                $usuario = existeMail($email);
+                if ($_POST['recordarme']) {
+                  setCookie('id', $email, time() + 3600);
+                }
+                loguearUsuario($usuario);
+                header('location:index.php');
+              }
+            }
 
-      <?php }
+           ?>
 
-        elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $errores['email'] = 'Ingrese su correo electrónico con un formato válido';?>
-
-          <div>
-            <?php echo $errores['email']; ?>
-          </div>
-
-          <?php } ?>
-
-        <?php }
-   ?>
-
-        <input type="text" name="email" value="<?= $email ?>" placeholder="Correo electrónico">
-
-        <br>
-        <div class="separador1"></div>
-
-        <input type="password" name="password" placeholder="password">
+                <?php if (!empty($errores)): ?>
+                <?php foreach ($errores as $error): ?>
+                <p class="warning"> <?= $error ?> </p>
+                <?php endforeach; ?>
+                <?php endif; ?>
 
 
-        <div class="separador"></div>
+           <input type="text" name="email" value="<?= $email ?>" placeholder="Correo electrónico">
 
-        <input type="submit" class="boton">Inicia sesión
+           <br>
+           <div class="separador1"></div>
 
-          <div class="preguntas">
-          <p>
-          <input type="checkbox" name="Recordarme" value=""> Recordarme </p>
-
-          <div class="separador"></div>
-
-          <a href="#">¿Olvidó su contraseña?</a>
-
-          <br><br>
-
-          <a href="formulario2.html">¿No tienes una cuenta? <b>Regístrate</b></a>
-        </div>
+           <input type="password" name="pass" placeholder="Password">
 
 
-      </fieldset>
-    </form>
+           <div class="separador"></div>
 
-    <?php require_once('./footer.php') ?>
-  </body>
-</html>
+           <input type="submit" class="boton">
+
+             <div class="preguntas">
+             <p>
+             <input type="checkbox" name="recordarme"> Recordarme </p>
+
+             <div class="separador"></div>
+
+             <a href="#">¿Olvidó su contraseña?</a>
+
+             <br><br>
+
+             <a href="formulario2.php">¿No tienes una cuenta? <b>Regístrate</b></a>
+           </div>
+
+
+         </fieldset>
+       </form>
+
+       <?php require_once('./footer.php') ?>
+     </body>
+   </html>
