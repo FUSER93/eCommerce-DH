@@ -73,29 +73,22 @@ input {
   width: 90%;
 }
 .nombre {
-  width: 76%;
+  width: 60%;
   padding: 4px;
 }
-.dia {
+
+.fecha {
   width: 25%;
-  padding: 4px;
-}
-.mes {
-  width: 25%;
-  padding: 4px;
-}
-.año {
-  width: 32%;
   padding: 4px;
 }
 
 .email {
-  width: 76%;
+  width: 60%;
   padding: 4px;
 }
 
 .contraseña {
-  width: 76%;
+  width: 60%;
   padding: 4px;
 }
 
@@ -104,20 +97,20 @@ input {
   padding-left: 3%;
 }
 .profesion {
-  width: 76%;
-  padding: 4px;
-}
-
-.caja2 select {
-  width: 76%;
-}
-.caja2 .dir {
   width: 60%;
   padding: 4px;
 }
 
+.caja2 select {
+  width: 60%;
+}
+.caja2 .dir {
+  width: 40%;
+  padding: 4px;
+}
+
 .caja2 .nro {
-  width: 25%;
+  width: 10%;
   padding: 4px;
 }
 
@@ -185,7 +178,37 @@ a {text-decoration: none;}
     font-size: 0.8em;
   }
 
-
+/*Errores*/
+.errorInput {
+  border: 2px solid red;
+  width: 60%;
+  padding: 4px;
+}
+.errorFecha {
+  width: 25%;
+  padding: 4px;
+  border:2px solid red;
+}
+.errorDireccion {
+  width: 40%;
+  padding: 4px;
+  border: 2px solid red;
+}
+.errorAvatar {
+  width: 30%;
+  border: 2px solid red;
+  background-color: red;
+  color: white;
+}
+.errorLocalidad {
+  width: 60%;
+  border: 2px solid red;
+}
+.errorNro {
+  width: 10%;
+  padding: 4px;
+  border: 2px solid red;
+}
             /* TABLET */
 
   @media (min-width: 768px) {
@@ -199,8 +222,8 @@ a {text-decoration: none;}
   header .menu{display: inline-block;}
   .menu a{font-size: 1.1em;}
   fieldset {width: 70%; margin-left: 15%;}
-  .mes {width: 10%;}
-  .año {width: 15%;}
+  .fecha {width: 10%;}
+  .errorFecha {width: 10%;}
   #check {margin-left: 15%;}
   h3 {font-size: 2em;}
   footer li {padding: 0.5%; font-size: 1.1em;}
