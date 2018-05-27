@@ -31,7 +31,7 @@ require_once('variables-formulario.php');
 
         if(empty($errores)) {
           grabarUsuario($_POST);
-          header('location:index.php');
+          header('location:registro-ok.php');
           exit;
         }
       }
