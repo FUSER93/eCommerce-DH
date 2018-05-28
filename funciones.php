@@ -120,7 +120,15 @@ function crearYGuardarUsuario($data){
     return false;
   }
 
-
+  function traerNombrePorId($unId) {
+    $nombre = traerTodos();
+    foreach ($nombre as $idnombre) {
+      if ($unId == $idnombre['nombre']) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   function validarLoginUsuario($data){
 
@@ -141,7 +149,6 @@ function crearYGuardarUsuario($data){
 
     return $errores;
   }
-
   function loguearUsuario($usuario){
     $_SESSION['id'] = $usuario['email'];
   }
